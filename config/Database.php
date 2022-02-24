@@ -4,8 +4,8 @@
     class Database 
     {
         // DB Parameters
-        private $host = 'localhost';
-        private $db_name = 'myblog';
+        private $host = null;
+        private $db_name = null;
         private $username = null;
         private $password = null;
         private $conn;
@@ -16,6 +16,8 @@
         {
             $this->username = getenv('USERNAME');
             $this->password = getenv('PASSWORD');
+            $this->host = getenv('HOST');
+            $this->db_name = getenv('DATABASE');
         }
         
         // DB Connect
